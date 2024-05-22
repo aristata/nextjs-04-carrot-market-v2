@@ -41,7 +41,7 @@ export default function Home() {
           <div
             key={index}
             className={
-              "flex items-center gap-4 odd:bg-orange-300 even:bg-cyan-300"
+              "flex items-center gap-4 border-b-2 pb-5 last:border-0 last:pb-0"
             }
           >
             <div className={"size-10 bg-blue-500 rounded-full"} />
