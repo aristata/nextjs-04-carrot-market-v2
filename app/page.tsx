@@ -2,9 +2,10 @@ export default function Home() {
   return (
     <main
       className={
-        "bg-gray-300 h-screen flex items-center justify-center dark:bg-gray-900 sm:bg-red-100 md:bg-green-100 lg:bg-cyan-100 xl:bg-orange-100 2xl:bg-purple-100"
+        "bg-gray-300 h-screen flex flex-col items-center justify-center dark:bg-gray-900 sm:bg-red-100 md:bg-green-100 lg:bg-cyan-100 xl:bg-orange-100 2xl:bg-purple-100"
       }
     >
+      {/* 로그인 */}
       <div
         className={
           "flex flex-col space-y-4 bg-white m-10 p-10 rounded-3xl shadow-2xl w-[32rem] dark:bg-gray-600 lg:flex-row lg:items-center lg:space-x-2 lg:space-y-0 *:outline-none ring ring-transparent transition-shadow has-[:invalid]:ring-red-100"
@@ -28,6 +29,32 @@ export default function Home() {
         >
           Log in
         </button>
+      </div>
+
+      {/* 리스트 */}
+      <div
+        className={
+          "flex flex-col space-y-4 bg-white rounded-3xl shadow-2xl p-5 w-full max-w-screen-sm"
+        }
+      >
+        {["Aris", "Bob", "Cherk", "Dean", "Edin"].map((person, index) => (
+          <div
+            key={index}
+            className={
+              "flex items-center gap-4 odd:bg-orange-300 even:bg-cyan-300"
+            }
+          >
+            <div className={"size-10 bg-blue-500 rounded-full"} />
+            <span className={"text-lg font-bold"}>{person}</span>
+            <div
+              className={
+                "size-6 bg-red-500 rounded-full text-white flex justify-center"
+              }
+            >
+              <span>{index}</span>
+            </div>
+          </div>
+        ))}
       </div>
     </main>
   );
