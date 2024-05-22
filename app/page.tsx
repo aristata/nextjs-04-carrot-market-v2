@@ -37,7 +37,7 @@ export default function Home() {
           "flex flex-col space-y-4 bg-white rounded-3xl shadow-2xl p-5 w-full max-w-screen-sm"
         }
       >
-        {["Aris", "Bob", "Cherk", "Dean", "Edin"].map((person, index) => (
+        {["Aris", "Bob", "Cherk", "Dean", "Edin", ""].map((person, index) => (
           <div
             key={index}
             className={
@@ -45,13 +45,20 @@ export default function Home() {
             }
           >
             <div className={"size-10 bg-blue-500 rounded-full"} />
-            <span className={"text-lg font-bold"}>{person}</span>
-            <div
+            <span
               className={
-                "size-6 bg-red-500 rounded-full text-white flex justify-center"
+                "text-lg font-bold empty:w-24 empty:h-5 empty:rounded-full empty:animate-pulse empty:bg-gray-300"
               }
             >
-              <span>{index}</span>
+              {person}
+            </span>
+            <div
+              className={
+                "size-6 bg-red-500 rounded-full text-white flex justify-center relative"
+              }
+            >
+              <span className={"z-10"}>{index}</span>
+              <div className="size-6 bg-red-500 rounded-full absolute animate-ping " />
             </div>
           </div>
         ))}
