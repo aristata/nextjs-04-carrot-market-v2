@@ -6,7 +6,7 @@ export default function Home() {
       }
     >
       {/* 로그인 */}
-      <div
+      {/* <div
         className={
           "flex flex-col space-y-4 bg-white m-10 p-10 rounded-3xl shadow-2xl w-[32rem] dark:bg-gray-600 lg:flex-row lg:items-center lg:space-x-2 lg:space-y-0 *:outline-none ring ring-transparent transition-shadow has-[:invalid]:ring-red-100"
         }
@@ -29,10 +29,10 @@ export default function Home() {
         >
           Log in
         </button>
-      </div>
+      </div> */}
 
       {/* 리스트 */}
-      <div
+      {/* <div
         className={
           "flex flex-col space-y-4 bg-white rounded-3xl shadow-2xl p-5 w-full max-w-screen-sm"
         }
@@ -62,6 +62,20 @@ export default function Home() {
             </div>
           </div>
         ))}
+      </div> */}
+
+      {/* 그룹 */}
+      <div className={"group flex flex-col space-y-2"}>
+        <input
+          className={"bg-gray-100 w-full p-2 group-hover:bg-gray-300"}
+          placeholder={"이메일을 입력하세요."}
+        />
+        <span className={"group-focus-within:block hidden text-red-500"}>
+          이메일 양식을 확인해주세요.
+        </span>
+        <button className={"border bg-blue-500 text-white p-2 rounded-md "}>
+          제출
+        </button>
       </div>
     </main>
   );
