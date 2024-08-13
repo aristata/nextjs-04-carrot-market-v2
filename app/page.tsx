@@ -1,82 +1,27 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <main
-      className={
-        "bg-gray-300 h-screen flex flex-col items-center justify-center dark:bg-gray-900 sm:bg-red-100 md:bg-green-100 lg:bg-cyan-100 xl:bg-orange-100 2xl:bg-purple-100"
-      }
-    >
-      {/* 로그인 */}
-      {/* <div
-        className={
-          "flex flex-col space-y-4 bg-white m-10 p-10 rounded-3xl shadow-2xl w-[32rem] dark:bg-gray-600 lg:flex-row lg:items-center lg:space-x-2 lg:space-y-0 *:outline-none ring ring-transparent transition-shadow has-[:invalid]:ring-red-100"
-        }
-      >
-        <input
-          className={
-            "w-full rounded-full h-12 bg-gray-200 pl-5 ring ring-transparent focus:ring-green-500 focus:ring-offset-2 transition-shadow placeholder:drop-shadow invalid:focus:ring-red-500 peer"
-          }
-          placeholder={"email"}
-          required
-          type={"email"}
-        />
-        <span className={"text-red-500 font-medium hidden peer-invalid:block"}>
-          Email is required.
-        </span>
-        <button
-          className={
-            "bg-black text-white py-2 rounded-full active:scale-95 transition-transform font-medium focus:scale-95 lg:p-2 lg:h-12 lg:px-4 peer-invalid:bg-red-100 peer-required:bg-green-500"
-          }
-        >
-          Log in
-        </button>
-      </div> */}
-
-      {/* 리스트 */}
-      {/* <div
-        className={
-          "flex flex-col space-y-4 bg-white rounded-3xl shadow-2xl p-5 w-full max-w-screen-sm"
-        }
-      >
-        {["Aris", "Bob", "Cherk", "Dean", "Edin", ""].map((person, index) => (
-          <div
-            key={index}
-            className={
-              "flex items-center gap-4 border-b-2 pb-5 last:border-0 last:pb-0"
-            }
-          >
-            <div className={"size-10 bg-blue-500 rounded-full"} />
-            <span
-              className={
-                "text-lg font-bold empty:w-24 empty:h-5 empty:rounded-full empty:animate-pulse empty:bg-gray-300"
-              }
-            >
-              {person}
-            </span>
-            <div
-              className={
-                "size-6 bg-red-500 rounded-full text-white flex justify-center relative"
-              }
-            >
-              <span className={"z-10"}>{index}</span>
-              <div className="size-6 bg-red-500 rounded-full absolute animate-ping " />
-            </div>
-          </div>
-        ))}
-      </div> */}
-
-      {/* 그룹 */}
-      <div className={"group flex flex-col space-y-2"}>
-        <input
-          className={"bg-gray-100 w-full p-2 group-hover:bg-gray-300"}
-          placeholder={"이메일을 입력하세요."}
-        />
-        <span className={"group-focus-within:block hidden text-red-500"}>
-          이메일 양식을 확인해주세요.
-        </span>
-        <button className={"border bg-blue-500 text-white p-2 rounded-md "}>
-          제출
-        </button>
+    <div className="flex flex-col items-center justify-between min-h-screen p-6">
+      <div className="my-auto flex flex-col items-center gap-4 *:font-medium">
+        <span className="text-9xl">🫵</span>
+        <h1 className="text-4xl">마! 니도?</h1>
+        <h2 className="text-2xl">마니도 마켓에 퍼뜩 오이소!</h2>
       </div>
-    </main>
+      <div className="flex flex-col items-center gap-3 w-full">
+        <Link
+          href={"/signin"}
+          className="w-full bg-orange-500 text-white text-lg font-medium py-3 rounded-md text-center hover:bg-orange-400 transition-colors"
+        >
+          계정 만들기
+        </Link>
+        <div className="flex gap-2">
+          <span>이미 계정이 있나요?</span>
+          <Link href={"/login"} className="hover:underline">
+            로그인
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }
